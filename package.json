@@ -1,0 +1,38 @@
+{
+  "name": "modulespress-vite-plugin",
+  "version": "1.0.0",
+  "description": "Modulespress plugin for Vite.",
+  "keywords": [
+    "modulespress",
+    "vite",
+    "vite-plugin"
+  ],
+  "homepage": "https://github.com/laravel/vite-plugin",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/laravel/vite-plugin.git"
+  },
+  "license": "MIT",
+  "author": "Laravel",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "type": "module",
+  "scripts": {
+    "build": "tsc"
+  },
+  "peerDependencies": {
+    "typescript": "*",
+    "vite": "*"
+  },
+  "devDependencies": {
+    "@types/node": "^22.7.6",
+    "fast-glob": "^3.3.2",
+    "vite": "^5.4.9"
+  },
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md",
+    "package.json"
+  ]
+}
