@@ -1,6 +1,6 @@
 {
   "name": "@modulespress/vite-plugin",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Vite plugin for ModulesPress framework.",
   "keywords": [
     "modulespress",
@@ -26,13 +26,15 @@
   "scripts": {
     "build": "tsc"
   },
+  "dependencies": {
+    "fast-glob": "^3.3.2"
+  },
   "peerDependencies": {
     "typescript": "*",
     "vite": "*"
   },
   "devDependencies": {
     "@types/node": "^22.7.6",
-    "fast-glob": "^3.3.2",
     "vite": "^5.4.9"
   },
   "files": [
