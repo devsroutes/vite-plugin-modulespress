@@ -1,19 +1,25 @@
 {
-  "name": "modulespress-vite-plugin",
+  "name": "@modulespress/vite-plugin",
   "version": "1.0.0",
-  "description": "Modulespress plugin for Vite.",
+  "description": "Vite plugin for ModulesPress framework.",
   "keywords": [
     "modulespress",
     "vite",
-    "vite-plugin"
+    "vite-plugin",
+    "vite-plugin-modulespress",
+    "modulespress-vite-plugin",
+    "wordpress",
+    "wordpress-plugin",
+    "wordpress-vite-plugin",
+    "wordpress-vite"
   ],
-  "homepage": "https://github.com/laravel/vite-plugin",
+  "homepage": "https://github.com/devsroutes/vite-plugin-modulespress",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/laravel/vite-plugin.git"
+    "url": "git+https://github.com/devsroutes/vite-plugin-modulespress.git"
   },
   "license": "MIT",
-  "author": "Laravel",
+  "author": "Saad Nadeem <saadnadeem@devsroutes.co> (https://github.com/devsroutes)",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "type": "module",

@@ -22,11 +22,7 @@ export function ModulesPressVitePlugin(options: ModulesPressPluginOptions = {}):
     } = options
 
     const root = path.resolve(pluginRootDir);
-    console.log({ PluginRootDir: root });
-
-    // Gather inputs based on custom or default patterns
     const input = fg.sync(inputPatterns);
-    console.log({ InputsDetected: input });
 
     return {
         name: 'vite:modulespress',
@@ -34,7 +30,7 @@ export function ModulesPressVitePlugin(options: ModulesPressPluginOptions = {}):
             root: root,
             publicDir: './static',
             build: {
-                manifest: true,
+                manifest: "vite/manifest.json",
                 sourcemap: true,
                 outDir: './build/assets',
                 emptyOutDir: true,
@@ -42,7 +38,7 @@ export function ModulesPressVitePlugin(options: ModulesPressPluginOptions = {}):
                     input: input,
                     output: {
                         entryFileNames: 'js/[name].[hash].js',
-                        assetFileNames: (assetInfo) => {
+                        assetFileNames: (assetInfo: any) => {
                             console.log(assetInfo);
                             if (/\.css$/.test(assetInfo.name as string)) {
                                 return 'css/[name].[hash].css';
@@ -65,12 +61,6 @@ export function ModulesPressVitePlugin(options: ModulesPressPluginOptions = {}):
                     },
                 },
             },
-            // resolve: {
-            //     alias: [
-            //         { find: '@static', replacement: fileURLToPath(new URL('./static', import.meta.url)) },
-            //         { find: '@resources', replacement: fileURLToPath(new URL('./resources', import.meta.url)) },
-            //     ],
-            // },
             css: {
                 preprocessorOptions: {
                     scss: scssOptions,
