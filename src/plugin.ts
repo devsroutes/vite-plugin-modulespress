@@ -39,7 +39,6 @@ export function ModulesPressVitePlugin(options: ModulesPressPluginOptions = {}):
                     output: {
                         entryFileNames: 'js/[name].[hash].js',
                         assetFileNames: (assetInfo: any) => {
-                            console.log(assetInfo);
                             if (/\.css$/.test(assetInfo.name as string)) {
                                 return 'css/[name].[hash].css';
                             }
